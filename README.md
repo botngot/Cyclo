@@ -1,6 +1,6 @@
-# v3
+![alt tag](https://i.imgur.com/9fhP9uF.jpg)
 
-> A Vue.js project
+> A Communication & Multimedia Design - Amsterdam University of Applied Sciences project
 
 ## Build Setup
 
