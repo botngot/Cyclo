@@ -38,6 +38,10 @@
 
 $c-blue : #2979ff;
 
+::-webkit-scrollbar { 
+display: none; 
+}
+.slick-slide, .slick-slide *{ outline: none !important; }
 html, body {
     padding: 0;
     margin: 0;
@@ -120,12 +124,12 @@ a {
 
 
 .safe-leave-active { 
-  animation: fadeoutcd 0.3s linear forwards ;
+  animation: fadeoutcd 0.5s cubic-bezier(0.23, 1, 0.32, 1) forwards ;
   //z-index: 3;
   .planner-instructions {
     // height: 56px;
     // z-index: 3;
-    animation: fadeoutc 0.3s linear forwards;
+    animation: fadeoutc 0.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
   }
 }
 
@@ -145,6 +149,31 @@ a {
     animation: fadeoutce1 1s cubic-bezier(0.6, 0.04, 0.98, 0.335) forwards;
 }
 
+.preview-leave-connect-leave-active { 
+    animation: gotoconnect 0.4s cubic-bezier(0.6, 0.04, 0.98, 0.335) forwards;
+    .routings {
+
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.4s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+    }
+    .flickity-viewport {
+      position: relative;
+      transform: translateY(-100px);
+      opacity: 0;
+      transition: all 0.4s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+    }
+    .visit-info {
+      position: relative;
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.4s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+    }
+    .visit {
+      background-color: transparent;
+    }
+}
+
 .preview-leave-leave-active { 
     animation: previewLeave 0.5s cubic-bezier(0.6, 0.04, 0.98, 0.335) forwards;
     //opacity: 0;
@@ -162,6 +191,17 @@ a {
       background-color: #fff;
     }
 }
+
+@keyframes gotoconnect {
+    0% {
+      opacity: 1;
+      //left: 0;
+    }
+    100% {
+      opacity: 1;
+      //left: 100%;
+    }
+  }
 
 @keyframes previewLeave {
     0% {
@@ -294,6 +334,15 @@ a {
     height: 100vh !important;
     z-index: 2;
       position: relative;
+  }
+}
+
+.popular {
+  .flickity-slider {
+    margin-left: 1em;
+    .planner-popular__item {
+      margin-right: 0.5rem;
+    }
   }
 }
 </style>

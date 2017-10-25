@@ -1,19 +1,24 @@
 <template>
-	<section class="safe"> 
+	<section class="safepage"> 
 		
 		<header>
-		<h2 @click="resetName">Safe cycling in Amsterdam</h2>
-		<router-link to="/planner">
-			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 22.88 22.88" style="enable-background:new 0 0 22.88 22.88;" xml:space="preserve">
-				<path d="M0.324,1.909c-0.429-0.429-0.429-1.143,0-1.587c0.444-0.429,1.143-0.429,1.587,0l9.523,9.539  l9.539-9.539c0.429-0.429,1.143-0.429,1.571,0c0.444,0.444,0.444,1.159,0,1.587l-9.523,9.524l9.523,9.539  c0.444,0.429,0.444,1.143,0,1.587c-0.429,0.429-1.143,0.429-1.571,0l-9.539-9.539l-9.523,9.539c-0.444,0.429-1.143,0.429-1.587,0  c-0.429-0.444-0.429-1.159,0-1.587l9.523-9.539L0.324,1.909z" fill="#FFFFFF"/>
+		
+		
+			<h2>About safe cycling in Amsterdam</h2>
+			<router-link to="/planner">
+			<svg @click="resetName" class="safe__arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 451.846 451.847" style="enable-background:new 0 0 451.846 451.847;" xml:space="preserve">
+			<g>
+				<path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744   L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284   c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z" fill="#fff"/>
+			</g>
 			</svg>
 		</router-link>
 		</header>
-		
+		<div class="safe__wrap">
 		<p class="tekst">Cycling is the fastes and most enjoyable way to get to know the city. Amsterdam is very bicycle-friendly. And not just the city centre - the suburbs are also worth a close look, and they are never more than 20 minutes away.</p>
 
 		<p class="tekst">Do be <span>extremeley alert</span>, because traffic - trams, all types of motorised transport, invalid's vehicles, other bicycles, pedestriants, roller-skaters, skateboarders and even horse-drawn carts - can come from unexpected directions.</p>
 		<iframe width="100%" height="210" src="https://www.youtube.com/embed/sEON08d76oE" frameborder="0" allowfullscreen></iframe>
+		</div>
     </section>
 </template>
 
@@ -32,7 +37,7 @@
 				this.$emit('modusInOut', this.inOut);
 
 				const tlVueGsap = new TimelineMax() 
-			        .to('.safe', 0.5, {autoAlpha:0})
+			        .to('.safepage', 0.5, {autoAlpha:1})
 			}
 		} 
 	} 
@@ -41,12 +46,21 @@
 
 <style lang="scss" scoped> 
 	.safe {
-		background-color: #fff;
+		//background-color: #fff;
 		width: 100%;
 		height: 100vh;
+		&__arrow {
+			transform: rotate(90deg);
+		}
+	}
+	.safe__wrap {
+		padding: 0.1em 0 6em;
 		background-color: #2979ff;
-		animation: fadebg 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;
-		animation-delay: 0.3s; 
+		animation: fadebg 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;
+		animation-delay: 0.6s; 
+	}
+	.safepage {
+		
 	}
 	header {
 		
@@ -56,13 +70,13 @@
     	h2 {
     		color: #fff;
     		margin: 0;
-    		font-size: 1.5em;
+    		font-size: 1em;
     	}
     	svg {
     		width: 15px;
 		    position: absolute;
 		    right: 1.2em;
-		    top: 1.6em;
+		    top: 1.4em;
     	}
 	}
 	p {
@@ -83,7 +97,7 @@
 	}
 	iframe {
 		animation: fadedtext 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;
-		animation-delay: 1.6s; 
+		animation-delay: 1.4s; 
 		transform: translateY(1em);
 		opacity: 0;
 	}

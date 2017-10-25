@@ -134,8 +134,15 @@
 
 		<div v-else>
 			<router-link to="/safe">
-				<div class="planner-instructions"  @click="safe">
-					<h2>Safe cycling in Amsterdam</h2>
+				<div class="planner-instructions" @click="safe">
+					<h2>About safe cycling in Amsterdam</h2>
+					<span class="planner__arrow">
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 451.846 451.847" style="enable-background:new 0 0 451.846 451.847;" xml:space="preserve">
+						<g>
+							<path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744   L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284   c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z" fill="#4392F1"/>
+						</g>
+						</svg>
+					</span>
 				</div>
 			</router-link>
 		</div>
@@ -169,7 +176,7 @@
 				this.myName = "safe";
 				this.$emit('nameWasReset1', this.myName);
 				const tlVueGsap = new TimelineMax() 
-			        .to('.planner-instructions', 1, {css:{height:"100vh"}, ease: Expo.easeOut}) 
+			        .to('.planner-instructions', 0.9, {css:{height:"100vh"}, ease: Quint.easeOut}) 
 			},
 			inOutModus() {
 				this.inOut = "out-in";
@@ -204,6 +211,12 @@
 	    top: 7em;
 	    left: 30px;
 
+	}
+	.planner__arrow {
+		position: absolute;
+	    top: 1.0em;
+	    right: 1em;
+	    transform: rotate(-90deg);
 	}
 	.planner-popular__item {
 	    box-shadow: 0 0.25em 1em 0 rgba(0, 0, 0, 0.15);
@@ -336,17 +349,17 @@
 			padding: 0 1em;
 			position: absolute;
     		bottom: 0em;
-    		background-color: #4392F1;
-    		margin: 0 0.5em;
-    		width: calc(100% - 3em);
+    		background-color: #fff;
+    		width: calc(100% - 2em);
     		box-shadow: 0 0.125em 0.25em 0 rgba(0,0,0,0.10);
-    		border-top-left-radius: 0.3em;
-    		border-top-right-radius: 0.3em;
     		z-index: 4;
     		h2 {
     			margin: 1em 0;
     			font-size: 1em;
-    			color: #f5f5f5;
+    			color: #4392F1;
+    		}
+    		.planner__arrow svg {
+    			width: 1em;
     		}
     		//animation: instructions 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
     		//animation-delay: 1.25s; 

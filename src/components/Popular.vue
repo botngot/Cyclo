@@ -36,106 +36,349 @@
 	        </div>
         </router-link>
 		<h1 class="popular__title headtitle">Most popular</h1>
+
 		<div class="planner-popular">
-			<div class="planner-popular__item pp1 planner__rijksmuseum">
+
+			<flickity ref="flickity" :options="flickityOptions">
+			<div class="planner-popular__item pp1 planner__rijksmuseum clickie">
 				<router-link to="/rijksmuseum">
 				<div class="planner-popular__img">
 					<div class="planner-popular__text">
 						
 							<h2 class="planner-popular__title" @click="preview">Rijksmuseum</h2>
 						
-						<div class="planner-popular__distance">1.7km</div>
+						<div class="planner-popular__distance">Museum</div>
 					</div>
 				</div>
 				</router-link>
 			</div>
 
-			<div class="planner-popular__item pp2 planner__artis">
-				<router-link to="/brouwerij">
+			<div class="planner-popular__item pp2 planner__vangogh clickie">
+				<div class="planner-popular__img">
+					<div class="planner-popular__text">
+						<router-link to="/vangogh">
+							<h2 class="planner-popular__title">Van Gogh Museum</h2>
+						</router-link>
+						<div class="planner-popular__distance">Museum</div>
+					</div>
+				</div> 
+			</div>
+
+			<div class="planner-popular__item pp3 planner__anne">
+				<div class="planner-popular__img">
+					<div class="planner-popular__text">
+						<router-link to="#">
+							<h2 class="planner-popular__title">Anne Frank House</h2>
+						</router-link>
+						<div class="planner-popular__distance">Museum</div>
+					</div>
+				</div> 
+			</div>
+
+			<div class="planner-popular__item pp2 planner__artis clickie">
+				<router-link to="/artis">
 					<div class="planner-popular__img">
 						<div class="planner-popular__text">
 							
-								<h2 class="planner-popular__title" @click="preview">Artis Zoo</h2>
+								<h2 class="planner-popular__title" @click="preview">Artis</h2>
 							
-							<div class="planner-popular__distance">1.2km</div>
+							<div class="planner-popular__distance">Zoo</div>
 						</div>
 					</div>
 				</router-link> 
 			</div>
 
-			<div class="planner-popular__item pp2 planner__brouwerij">
+			<div class="planner-popular__item pp2 planner__brouwerij clickie">
+				<div class="planner-popular__img">
+					<div class="planner-popular__text">
+						<router-link to="/heineken">
+							<h2 class="planner-popular__title">Heineken Experience</h2>
+						</router-link>
+						<div class="planner-popular__distance">Old brewery</div>
+					</div>
+				</div> 
+			</div>
+
+			<div class="planner-popular__item pp2 planner__stedelijk">
 				<div class="planner-popular__img">
 					<div class="planner-popular__text">
 						<router-link to="#">
-							<h2 class="planner-popular__title">Heineken Experience</h2>
+							<h2 class="planner-popular__title">Stedelijk Museum</h2>
 						</router-link>
-						<div class="planner-popular__distance">1.2km</div>
+						<div class="planner-popular__distance">Museum</div>
 					</div>
 				</div> 
 			</div>
 
-			<div class="planner-popular__item pp3 planner__heineken">
+			<div class="planner-popular__item pp2 planner__nemo">
 				<div class="planner-popular__img">
 					<div class="planner-popular__text">
-						<router-link to="/brouwerij">
-							<h2 class="planner-popular__title">Brouwerij 't IJ</h2>
+						<router-link to="#">
+							<h2 class="planner-popular__title">Nemo</h2>
 						</router-link>
-						<div class="planner-popular__distance">2.1km</div>
+						<div class="planner-popular__distance">Science Museum</div>
 					</div>
 				</div> 
 			</div>
 
+			<div class="planner-popular__item pp2 planner__eye">
+				<div class="planner-popular__img">
+					<div class="planner-popular__text">
+						<router-link to="#">
+							<h2 class="planner-popular__title">Eye</h2>
+						</router-link>
+						<div class="planner-popular__distance">Filmmuseum</div>
+					</div>
+				</div> 
+			</div>
+
+			<div class="planner-popular__item pp2 planner__herm">
+				<div class="planner-popular__img">
+					<div class="planner-popular__text">
+						<router-link to="#">
+							<h2 class="planner-popular__title">Hermitage</h2>
+						</router-link>
+						<div class="planner-popular__distance">Museum</div>
+					</div>
+				</div> 
+			</div>
+			
+			<div class="planner-popular__item pp2 planner__scheepe">
+				<div class="planner-popular__img">
+					<div class="planner-popular__text">
+						<router-link to="#">
+							<h2 class="planner-popular__title">National Maritime Museum</h2>
+						</router-link>
+						<div class="planner-popular__distance">Museum</div>
+					</div>
+				</div> 
+			</div>
+
+			</flickity>
 
 		</div>
 
-		<h1 class="popular__title exploretitle">Explore Amsterdam East</h1>
+		<h1 class="popular__title exploretitle">Explore Amsterdam By Theme</h1>
+		<h1 class="popular__title exploretitle blacktitle">Food</h1>
 		<div class="planner-popular">
-		<div class="planner-popular__item pp4 planner__scheep">
-			<div class="planner-popular__img">
-				<div class="planner-popular__text">
-					<router-link to="#">
-						<h2 class="planner-popular__title" @click="preview">Scheepvaart-museum</h2>
-					</router-link>
-					<div class="planner-popular__distance">2.1km</div>
+			<flickity ref="flickity" :options="flickityOptions">
+				<div class="planner-popular__item pp4 planner__boiboi">
+					<div class="planner-popular__img">
+						<div class="planner-popular__text">
+							<router-link to="#">
+								<h2 class="planner-popular__title" @click="preview">Boi Boi</h2>
+							</router-link>
+							<div class="planner-popular__distance">Thai</div>
+						</div>
+					</div>
 				</div>
-			</div>
+
+				<div class="planner-popular__item pp5 planner__rijsel">
+					<div class="planner-popular__img">
+						<div class="planner-popular__text">
+							<router-link to="#">
+								<h2 class="planner-popular__title" @click="preview">Rijsel</h2>
+							</router-link>
+							<div class="planner-popular__distance">French-Flemish</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="planner-popular__item pp6 planner__505">
+					<div class="planner-popular__img">
+						<div class="planner-popular__text">
+							<router-link to="#">
+								<h2 class="planner-popular__title" @click="preview">Vijfnulvijf</h2>
+							</router-link>
+							<div class="planner-popular__distance">Asian fusion</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="planner-popular__item pp6 viewmore">
+					<div class="planner-popular__img">
+						<div class="planner-popular__text">
+							<router-link to="#">
+								<h2 class="planner-popular__title" @click="preview">View more</h2>
+							</router-link>
+							
+						</div>
+					</div>
+				</div>
+			</flickity>
 		</div>
 
-		<div class="planner-popular__item pp5 planner__javastraat">
-			<div class="planner-popular__img">
-				<div class="planner-popular__text">
-					<router-link to="#">
-						<h2 class="planner-popular__title" @click="preview">Javastraat</h2>
-					</router-link>
-					<div class="planner-popular__distance">1.2km</div>
+		<h1 class="popular__title exploretitle blacktitle">10 of the best wine bars</h1>
+		<div class="planner-popular">
+			<flickity ref="flickity" :options="flickityOptions">
+				<div class="planner-popular__item pp7 planner__vyne">
+					<div class="planner-popular__img">
+						<div class="planner-popular__text">
+							<router-link to="#">
+								<h2 class="planner-popular__title" @click="preview">Vyne</h2>
+							</router-link>
+							<!-- <div class="planner-popular__distance">2.1km</div> -->
+						</div>
+					</div>
 				</div>
-			</div>
+
+				<div class="planner-popular__item pp8 planner__glou">
+					<div class="planner-popular__img">
+						<div class="planner-popular__text">
+							<router-link to="#">
+								<h2 class="planner-popular__title" @click="preview">Glou Glou</h2>
+							</router-link>
+							<!-- <div class="planner-popular__distance">1.2km</div> -->
+						</div>
+					</div>
+				</div>
+
+				<div class="planner-popular__item pp9 planner__wester">
+					<div class="planner-popular__img">
+						<div class="planner-popular__text">
+							<router-link to="#">
+								<h2 class="planner-popular__title" @click="preview">Wester Wijnfabriek</h2>
+							</router-link>
+							<!-- <div class="planner-popular__distance">500m</div> -->
+						</div>
+					</div>
+				</div>
+				<div class="planner-popular__item pp6 viewmore">
+					<div class="planner-popular__img">
+						<div class="planner-popular__text">
+							<router-link to="#">
+								<h2 class="planner-popular__title" @click="preview">View more</h2>
+							</router-link>
+							
+						</div>
+					</div>
+				</div>
+			</flickity>
 		</div>
 
-		<div class="planner-popular__item pp6 planner__dappermarkt">
-			<div class="planner-popular__img">
-				<div class="planner-popular__text">
-					<router-link to="#">
-						<h2 class="planner-popular__title" @click="preview">Dappermarkt</h2>
-					</router-link>
-					<div class="planner-popular__distance">500m</div>
+		<h1 class="popular__title exploretitle blacktitle">5 things to do in Noord</h1>
+		<div class="planner-popular tempimg">
+			<flickity ref="flickity" :options="flickityOptions">
+				<div class="planner-popular__item pp6 viewmore">
+					<div class="planner-popular__img">
+						<div class="planner-popular__text">
+							<router-link to="#">
+								<h2 class="planner-popular__title" @click="preview"></h2>
+							</router-link>
+							
+						</div>
+					</div>
 				</div>
-			</div>
+
+				<div class="planner-popular__item pp6 viewmore">
+					<div class="planner-popular__img">
+						<div class="planner-popular__text">
+							<router-link to="#">
+								<h2 class="planner-popular__title" @click="preview"></h2>
+							</router-link>
+							
+						</div>
+					</div>
+				</div>
+
+				<div class="planner-popular__item pp6 viewmore">
+					<div class="planner-popular__img">
+						<div class="planner-popular__text">
+							<router-link to="#">
+								<h2 class="planner-popular__title" @click="preview"></h2>
+							</router-link>
+							
+						</div>
+					</div>
+				</div>
+				<div class="planner-popular__item pp6 viewmore">
+					<div class="planner-popular__img">
+						<div class="planner-popular__text">
+							<router-link to="#">
+								<h2 class="planner-popular__title" @click="preview"></h2>
+							</router-link>
+							
+						</div>
+					</div>
+				</div>
+			</flickity>
 		</div>
-	</div>
+
+		<h1 class="popular__title exploretitle blacktitle">5 things to do in Oostelijke Eilanden</h1>
+		<div class="planner-popular tempimg">
+			<flickity ref="flickity" :options="flickityOptions">
+				<div class="planner-popular__item pp6 viewmore">
+					<div class="planner-popular__img">
+						<div class="planner-popular__text">
+							<router-link to="#">
+								<h2 class="planner-popular__title" @click="preview"></h2>
+							</router-link>
+							
+						</div>
+					</div>
+				</div>
+
+				<div class="planner-popular__item pp6 viewmore">
+					<div class="planner-popular__img">
+						<div class="planner-popular__text">
+							<router-link to="#">
+								<h2 class="planner-popular__title" @click="preview"></h2>
+							</router-link>
+							
+						</div>
+					</div>
+				</div>
+
+				<div class="planner-popular__item pp6 viewmore">
+					<div class="planner-popular__img">
+						<div class="planner-popular__text">
+							<router-link to="#">
+								<h2 class="planner-popular__title" @click="preview"></h2>
+							</router-link>
+							
+						</div>
+					</div>
+				</div>
+				<div class="planner-popular__item pp6 viewmore">
+					<div class="planner-popular__img">
+						<div class="planner-popular__text">
+							<router-link to="#">
+								<h2 class="planner-popular__title" @click="preview"></h2>
+							</router-link>
+							
+						</div>
+					</div>
+				</div>
+			</flickity>
+		</div>
 
 	</section>
 </template>
 
 <script>
 	import { eventBus } from '../main';
+	import Flickity from 'vue-flickity';
 
 	export default {
 		data: function() {
 	        return {
-	            destination: 'Where to?'
+	            destination: 'Where to?',
+	            flickityOptions: {
+	                // initialIndex: 1,
+	                prevNextButtons: false,	
+	                pageDots: false,
+	                //wrapAround: false,
+	                autoPlay: false,
+	                cellAlign: 'left',
+	                contain: true
+
+	                // any options from Flickity can be used
+	            }
 	        }
 	    }, 
+	    components: {
+	        Flickity
+	    },
 		props: { 
 			userAge: String
 		},
@@ -159,6 +402,10 @@
 	        .from('.pp5', 0.7, {y: 100, autoAlpha:0, ease: Power4.easeOut}, '-=0.5')
 	        .from('.pp6', 0.7, {y: 100, autoAlpha:0, ease: Power4.easeOut}, '-=0.5')
 
+	        .from('.pp7', 0.7, {y: 100, autoAlpha:0, ease: Power4.easeOut}, '-=0.5')
+	        .from('.pp8', 0.7, {y: 100, autoAlpha:0, ease: Power4.easeOut}, '-=0.5')
+	        .from('.pp9', 0.7, {y: 100, autoAlpha:0, ease: Power4.easeOut}, '-=0.5')
+
 	        .from('.headtitle', 0.5, {autoAlpha:0, ease: Power4.easeOut}, 0.2)
 	        .from('.exploretitle', 0.6, {autoAlpha:0, ease: Power4.easeOut}, 0.3)
 	    }
@@ -167,17 +414,22 @@
 </script>
 
 <style lang="scss" scoped> 
+
 	h1 {
 		font-size: 1.25em;
 		margin: 0;
 		font-weight: 600;
     	margin-bottom: 0.5em;
 	}
+	.blacktitle {
+		color: #659fff;
+		font-size: 1em;
+	}
 	.headtitle {
 		margin-top: 1em;
 	}
 	.popular {
-		background-color: #F5F5F8;
+		background-color: #fff;
 		overflow-x: hidden;
 		height: 100vh;
 		&__title {
@@ -189,6 +441,7 @@
 		// 	animation: fadein 0.75s cubic-bezier(0.785, 0.135, 0.15, 0.86) forwards;
 		// }
 	}
+
 	@keyframes fadein {
 		0% {
 			//opacity: 0;
@@ -227,6 +480,71 @@
 				background-image: url('../assets/rijksmuseum.jpg');
 			}
 		}
+		&__vangogh {
+			.planner-popular__img {
+				background-image: url('../assets/vangogh.jpg');
+			}
+		}
+		&__anne {
+			.planner-popular__img {
+				background-image: url('../assets/annefrank.jpg');
+			}
+		}
+		&__stedelijk {
+			.planner-popular__img {
+				background-image: url('../assets/stedelijk.jpg');
+			}
+		}
+		&__nemo {
+			.planner-popular__img {
+				background-image: url('../assets/nemo.jpg');
+			}
+		}
+		&__eye {
+			.planner-popular__img {
+				background-image: url('../assets/eye.jpg');
+			}
+		}
+		&__herm {
+			.planner-popular__img {
+				background-image: url('../assets/hermitage.jpg');
+			}
+		}
+		&__scheepe {
+			.planner-popular__img {
+				background-image: url('../assets/scheep.jpg');
+			}
+		}
+		&__boiboi {
+			.planner-popular__img {
+				background-image: url('../assets/boiboi.jpg');
+			}
+		}
+		&__rijsel {
+			.planner-popular__img {
+				background-image: url('../assets/rijsel.jpg');
+			}
+		}
+		&__505 {
+			.planner-popular__img {
+				background-image: url('../assets/505.jpg');
+			}
+		}
+		&__vyne {
+			.planner-popular__img {
+				background-image: url('../assets/vyne.jpg');
+			}
+		}
+		&__glou {
+			.planner-popular__img {
+				background-image: url('../assets/glou.jpg');
+			}
+		}
+		&__wester {
+			.planner-popular__img {
+				background-image: url('../assets/wester.jpg');
+			}
+		}
 		&__artis {
 			.planner-popular__img {
 				background-image: url('../assets/artis.jpg');
@@ -258,12 +576,13 @@
 				background-image: url('../assets/scheeps.jpg');
 			}
 		}
+		
 	} 
 	.planner-popular {
-		overflow-x: hidden; 
+		//overflow-x: hidden; 
 		//padding-bottom: 2em;
-		display: flex;
-		width: 100em;
+		//display: flex;
+		//width: 100em;
 		&__item {   
 			box-shadow: 0 0.25em 1em 0 rgba(0,0,0,0.15);
 			border-radius: 0.2em;
@@ -307,6 +626,45 @@
 			}
 		}
 		
+	}
+	.clickie {
+		.planner-popular__img:after {
+			border-bottom: 4px rgba(0, 0, 255, 0.3) solid;
+		}
+	}
+	.viewmore {
+		&:after {
+			position: absolute;
+			content:"";
+			top:0;
+			left:0;
+			width:100%;
+			height:100%;
+			opacity:0.75;
+			background-color: #000;
+		}
+		.planner-popular__text {
+			bottom: 20%;
+		    left: 20%;
+		}
+	}
+	.tempimg {
+		.viewmore {
+			&:after {
+				position: absolute;
+				content:"";
+				top:0;
+				left:0;
+				width:100%;
+				height:100%;
+				opacity:0.75;
+				background-color: #2979ff;
+			}
+			.planner-popular__text {
+				bottom: 20%;
+			    left: 20%;
+			}
+		}
 	}
 	input {
 		border: 0;

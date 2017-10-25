@@ -2,7 +2,8 @@
 	<section class="intro">
 		<div class="loader">
 			<!-- <h1 class="loader__title">A</h1> -->
-			<img src="../assets/logo.svg" alt="">
+			<img class="loader__logo" src="../assets/logo.svg" alt="">
+			<h1 class="loader__title">Cyclo</h1>
 		</div>
         <flickity ref="flickity" :options="flickityOptions">
 		    <div class="carousel-cell cell-first">
@@ -11,11 +12,12 @@
 			    	<div class="intro__circle">
 			    		
 			    		<img src="../assets/slide1.jpg" alt="">
-
+						
 			    	</div>
 			    	<div class="intro__text">
 			    		<h2>Navigate through Amsterdam</h2>
-			    		<p>This app will help you navigate safely through Amsterdam by bike.</p>
+			    		<p>Biking through Amsterdam can be difficult when you're an inexperienced biker. Cyclo will help you navigate safely through Amsterdam by bike.</p>
+			    		<p></p>
 			    	</div>
 		    	</div>
 		    </div>
@@ -59,7 +61,7 @@
 			    	</div>
 			    	<div class="intro__text">
 			    		<h2>Follow turn by turn directions</h2>
-			    		<p>Put your phone in your pocket and follow the turn by turn directions on the navigator</p>
+			    		<p>Mount your phone on your handlebar and follow the turn by turn directions.</p>
 			    	</div>
 			    	<router-link to="/planner" class="intro__continue">
 				    	
@@ -114,19 +116,40 @@ $c-blue : #304ffe;
     animation: loader 0.5s forwards;
     animation-delay: 3s; 
     &__title {
-    	font-size: 15em;
-    	color: #fff;
+    	font-size: 5em;
+    	color: #78BAF8;
     	font-weight: bolder;
     	text-align: center;
     	line-height: 1;
+    	position: absolute;
+    	bottom: 12%;
+    	left: 50%;
+    	transform: translate(-50%, -50%);
+    	animation: loaderfade 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+    	opacity: 0;
+    	animation-delay: 0.5s; 
+
     }
     img {
     	width: 60%;
     	position: absolute;
-    	top: 50%;
+    	top: 40%;
     	left: 50%;
     	transform: translate(-50%, -50%);
+    	animation: loaderfade 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+    	opacity: 0;
+    	
     }
+}
+@keyframes loaderfade {
+	0% {
+		opacity: 0;
+		margin-top: 80px;
+	}
+	100% {
+		opacity: 1;
+		margin-top: 0;
+	}
 }
 .intro {
 	overflow: hidden;
@@ -134,6 +157,7 @@ $c-blue : #304ffe;
 	h2 {
 		font-weight: 900;
 		color: #fff;
+		margin: 0;
 	}
 	p {
 		color: #fff;
@@ -150,7 +174,7 @@ $c-blue : #304ffe;
 	    right: 2em;
 	    z-index: 2;
 	    span {
-	    	color: #7eafe4;
+	    	color: #fff;
 	    }
 	}
 	&__circle {
@@ -170,18 +194,18 @@ $c-blue : #304ffe;
 		padding: 1em 2em;
 	}
 	&__continue {
-		background: #7eafe4;
+		background: #fff;
 		//background-image: linear-gradient(to right, #00c6fb 0%, #005bea 100%);
 	    z-index: 4;
 	    position: absolute;
 	    width: calc(100% - 2em);
 	    margin-left: 1em;
 	    text-align: center;
-	    color: #fff;
+	    color: #7eafe4;
 	    transform: translateY(150px);
 		padding: 0.5em 0;
 		bottom: 1em;
-		box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+		//box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 	}
 }
  

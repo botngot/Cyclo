@@ -2,7 +2,7 @@
 	<section class="connect">
 		<div class="visit">
 			<!-- <img src="../assets/rijksmuseum.jpg" alt=""> -->
-			<router-link to="/planner" class="connect__back">
+			<!-- <router-link to="/planner" class="connect__back">
 				<div class="arrow" @click="resetName">
 					<svg viewBox="0 0 31.49 31.49" style="enable-background:new 0 0 31.49 31.49;" xml:space="preserve">
 					<path d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111
@@ -10,19 +10,17 @@
 						c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z"/>
 					</svg>
 				</div>
-			</router-link>
+			</router-link> -->
 			<div class="visit-info">
 				<div class="intro__circle">
 					<img src="../assets/connect.jpg" alt="">
 				</div>
-				<h1>Place your phone in the mount</h1>
+				<h1 class="visit-info__title">Please place your phone on the mount</h1>
 				<div class="visit-info__text">
 					<ul>
-						<li>1. Put your phone in the case</li>
-						<li>2. Attach the case to the mount</li>
-						<li>3. Press start when you're ready</li>
-						
-						<li>4. Safe cycling!</li>
+						<li>1. For your and others' safety mount the phone on your steering wheel</li>
+						<li>2. Phone will be on 'Do not distract'-mode</li>
+						<li>3. Use hand signals and safe cycling!</li>
 						
 							<router-link to="/navigating"><button class="planner-along__btn">Start navigating</button></router-link>
 						
@@ -77,6 +75,9 @@
 		//height: 50vh; 
 		//background-color: #2962ff;
 		margin: 0 auto;
+		opacity: 0;
+		animation: fadein 1s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+		animation-delay: 0.5s; 
 		svg {
 			width: 60%;
 		    margin: 0 auto;
@@ -95,17 +96,25 @@
 			left: 0;
 		}
 	}
+	@keyframes fadein {
+		0% {
+			opacity: 0;
+			transform: translateY(50px);
+		}
+		40% {
+			opacity: 1;
+		}
+		100% {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
 	.connect {
-		// &__back {
-		// 	padding: 1em;
-		// 	position: relative;
-  //   		top: 1rem;
-		// }
 		position: absolute;
 		top: 0;
 		width: 100vw;
 		
-		z-index: 4; 
+		z-index: 2; 
 		.visit {
 			width: 100vw;
 			height: 100vh;
@@ -115,14 +124,29 @@
 	.visit-info {
 		&__text {
 			padding: 0 1em 1em;
+			animation: fadein 0.6s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+			animation-delay: 0.75s; 
+			opacity: 0;
+
+			li {
+				display: block;
+			}
+		}
+		&__title {
+			opacity: 0;
+			animation: fadein 0.6s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+			animation-delay: 0.7s; 
+			padding: 0 1em;
+			margin: 0.5em 0 0;
 		}
 	}
 	.visit {
-		animation: visit 0.5s forwards;
+		//animation: visit 0.5s forwards;
 		//transform: translateY(550px);
-		position: absolute;
-		left: 100%;
+		//position: absolute;
+		//left: 100%;
 		background-color: #fff;
+		opacity: 1;
 	}
 
 	@keyframes visit {
